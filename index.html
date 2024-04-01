@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Orçamento</title>
+</head>
+
+        <div class="content">
+            <div class="imagem-formulario">
+                <img class="imagem-lateral" src="logo.png" />
+                <form>
+                    <label for="endereco-destino">Quantos dias por mês?</label>
+                    <input type="number" class="diasPorMes" placeholder="Dias por mês" required>
+
+                    <label for="endereco-inicio">Endereço de Início:</label>
+                    <input type="text" placeholder="digite a origem.." class="origem" required/>
+
+                    <label for="endereco-destino">Endereço Final:</label>
+                    <input type="text" placeholder="digite o destino.." class="destino" required/>
+
+                    <div>
+                        <label for="idaVoltaCheckbox">Viagem de ida e volta?</label>
+                        <input type="checkbox" id="idaVoltaCheckbox">
+                    </div>
+                    
+                    <button id="consultar" class="btn-send" type="button" onclick="calculaValor()">
+                        Consultar
+                    </button>
+                </form>
+            </div>    
+          
+
+            <div class="resultado-ok">
+                Valor do orçamento Mensal: <br>
+                <span class="valor"></span>
+            </div>
+
+            <div class="mapa-container"></div>
+
+            <div class="resultado-erro">
+                Tivemos um erro ao solicitar o orçamento, favor entre em contato com nosso whats...
+            </div>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2RNrLjrs-5iEu-qPdBoFoRXsUFcTtj4M&libraries=places"></script>
+            <script src="./index.js"></script>
+
+        </div>
+
+    </body>
+
+</html>
